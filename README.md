@@ -11,14 +11,14 @@ Prints neo4j logical query plan during execution.
 
 Run the modified docker container!
 ```
-docker run -itd -n npp  TODO
+docker run -itd --name npp TODO
 ```
 
 ## Usage Guide
 
 First, run your query using `cypher-shell`.
 ```
-docker run -it npp "cypher-shell -u neo4j -p neo4j"
+docker exec -it npp "cypher-shell -u neo4j -p neo4j"
 ```
 
 #### Physical(Execution) Plan Debugging

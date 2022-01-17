@@ -13,4 +13,4 @@ RUN bin/neo4j-admin set-default-admin neo4j && \
 	echo "dbms.query_cache_size=0" >> conf/neo4j.conf && \
 	echo "cypher.min_replan_interval=1s" >> conf/neo4j.conf && \
 	echo "cypher.statistics_divergence_threshold=0.0" >> conf/neo4j.conf 
-CMD bin/neo4j start
+CMD bin/neo4j console
