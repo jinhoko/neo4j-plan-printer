@@ -11,7 +11,7 @@ Prints neo4j logical query plan during execution.
 
 Run the modified docker container!
 ```
-docker run -itd --name npp TODO
+docker run -itd --name npp ben4945/neo4j-plan-printer
 ```
 
 ## Usage Guide
@@ -30,7 +30,7 @@ Just simply use `EXPLAIN` query of neo4j. E.g. `EXPLAIN MATCH (n) RETURN n`.
 
 The engine omits log to `neo4j.log` while the logical plan is generated.
 ```
-docker run -it npp cat /root/neo4j/logs/neo4j.log
+docker exec -it npp cat /root/neo4j/logs/neo4j.log
 ```
 
 For each query plan, the logical plan is recorded in the following format :
