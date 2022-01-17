@@ -1,9 +1,10 @@
 # syntax=docker/dockerfile:1
 FROM maven:3.8.4-jdk-11
 COPY ./neo4j-community-4.3.9-SNAPSHOT-unix.tar.gz /root/
+WORKDIR /root/
 RUN tar -zxf /root/neo4j-community-4.3.9-SNAPSHOT-unix.tar.gz && \
 	mv /root/neo4j-community-4.3.9-SNAPSHOT/ /root/neo4j/
-WORKDIR /root/neo4j/
+WORKDIR /root/eo4j/
 ENV PATH=/root/neo4j/bin/:$PATH
 
 # set id/pw for cypher-shell and disable query cache
