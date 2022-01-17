@@ -18,8 +18,9 @@ docker run -itd --name npp TODO
 
 First, run your query using `cypher-shell`.
 ```
-docker exec -it npp "cypher-shell -u neo4j -p neo4j"
+docker exec -it npp cypher-shell -u neo4j -p neo4j
 ```
+Add nodes and relationships, and then execute some query. Refer `./example-query.cypher`.
 
 #### Physical(Execution) Plan Debugging
 
